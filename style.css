@@ -1,0 +1,1602 @@
+/* =====================================
+   ISSAN FOODS
+   GLOBAL STYLES
+===================================== */
+
+:root{
+
+--primary:#FFC107;
+--secondary:#111111;
+--accent:#E63946;
+--light:#ffffff;
+--grey:#666666;
+--background:#f8f9fb;
+--card:#ffffff;
+
+--shadow:0 20px 45px rgba(0,0,0,.12);
+
+--radius:18px;
+
+--transition:.35s ease;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:var(--background);
+color:#222;
+overflow-x:hidden;
+line-height:1.7;
+
+}
+
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+.container{
+
+width:min(1200px,90%);
+margin:auto;
+
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+
+background:rgba(17, 17, 17, 0);
+
+backdrop-filter:blur(0px);
+
+transition:.4s;
+
+}
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+width:min(1250px,92%);
+margin:auto;
+
+padding:18px 0;
+
+}
+
+.logo img{
+
+height:65px;
+
+transition:.4s;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:35px;
+
+align-items:center;
+
+}
+
+.nav-links a{
+
+color:white;
+
+font-weight:500;
+
+font-size:16px;
+
+position:relative;
+
+transition:.3s;
+
+}
+
+.nav-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:0%;
+
+height:2px;
+
+background:var(--primary);
+
+transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-links a:hover::after{
+
+width:100%;
+
+}
+
+.menu-toggle{
+
+display:none;
+
+flex-direction:column;
+
+cursor:pointer;
+
+gap:6px;
+
+}
+
+.menu-toggle span{
+
+width:28px;
+
+height:3px;
+
+background:white;
+
+border-radius:5px;
+
+transition:.3s;
+
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+
+url("images/hero.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(0,0,0,.15),
+
+rgba(0,0,0,.45)
+
+);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+width:min(900px,92%);
+
+color:white;
+
+animation:fadeUp 1.2s ease;
+
+}
+
+.hero-logo{
+
+width:80px;
+
+margin:auto;
+
+margin-bottom:35px;
+
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.35));
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+font-weight:800;
+
+line-height:1.15;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+display:block;
+
+color:var(--primary);
+
+}
+
+.hero p{
+
+font-size:21px;
+
+max-width:760px;
+
+margin:auto;
+
+opacity:.95;
+
+line-height:1.9;
+
+margin-bottom:45px;
+
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:16px 42px;
+
+border-radius:50px;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:var(--transition);
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.primary{
+
+background:var(--primary);
+
+color:#111;
+
+box-shadow:0 15px 35px rgba(255,193,7,.35);
+
+}
+
+.primary:hover{
+
+transform:translateY(-5px);
+
+background:white;
+
+}
+
+.secondary{
+
+border:2px solid white;
+
+color:white;
+
+}
+
+.secondary:hover{
+
+background:white;
+
+color:#111;
+
+transform:translateY(-5px);
+
+}
+
+/* =====================================
+   SECTION TITLES
+===================================== */
+
+section{
+
+padding:110px 0;
+
+}
+
+.section-heading{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-heading h2{
+
+font-size:48px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+color:#111;
+
+}
+
+.section-heading p{
+
+max-width:780px;
+
+margin:auto;
+
+font-size:18px;
+
+color:var(--grey);
+
+line-height:1.9;
+
+}
+
+/* =====================================
+   REUSABLE CARDS
+===================================== */
+
+.card{
+
+background:white;
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes zoom{
+
+0%{
+
+transform:scale(.95);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ececec;
+
+}
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about{
+
+background:#ffffff;
+
+}
+
+.about .container{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.about-image img{
+
+width:100%;
+
+border-radius:25px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.about-image img:hover{
+
+transform:scale(1.03);
+
+}
+
+.about-content h2{
+
+font-size:46px;
+
+margin-bottom:25px;
+
+color:#111;
+
+}
+
+.about-content p{
+
+font-size:17px;
+
+color:#666;
+
+margin-bottom:20px;
+
+line-height:1.9;
+
+}
+
+.about-grid{
+
+margin-top:40px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+.about-grid div{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.about-grid div:hover{
+
+transform:translateY(-8px);
+
+}
+
+.about-grid h3{
+
+font-size:34px;
+
+color:#FFC107;
+
+margin-bottom:10px;
+
+}
+
+/* =====================================
+   BRANDS
+===================================== */
+
+.brands{
+
+background:#f8f9fb;
+
+}
+
+.brand-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+.brand-card{
+
+background:white;
+
+border-radius:24px;
+
+padding:40px 30px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.brand-card:hover{
+
+transform:translateY(-12px);
+
+}
+
+.brand-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:8px;
+
+}
+
+.brand-card img{
+
+height:130px;
+
+width:auto;
+
+margin:auto;
+
+margin-bottom:25px;
+
+transition:.35s;
+
+}
+
+.brand-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.brand-card h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.brand-card p{
+
+color:#666;
+
+line-height:1.8;
+
+margin-bottom:25px;
+
+}
+
+.brand-card a{
+
+display:inline-block;
+
+padding:12px 30px;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+/* DAYY */
+
+.dayy::before{
+
+background:#FFD400;
+
+}
+
+.dayy a{
+
+background:#FFD400;
+
+color:#111;
+
+}
+
+.dayy a:hover{
+
+background:#111;
+
+color:white;
+
+}
+
+/* SOHA */
+
+.soha::before{
+
+background:#D62828;
+
+}
+
+.soha a{
+
+background:#D62828;
+
+color:white;
+
+}
+
+.soha a:hover{
+
+background:#111;
+
+}
+
+/* ARROZ */
+
+.arroz::before{
+
+background:#00B4D8;
+
+}
+
+.arroz a{
+
+background:#00B4D8;
+
+color:white;
+
+}
+
+.arroz a:hover{
+
+background:#111;
+
+}
+
+/* THREE50ML */
+
+.drinks::before{
+
+background:#00C853;
+
+}
+
+.drinks a{
+
+background:#00C853;
+
+color:white;
+
+}
+
+.drinks a:hover{
+
+background:#111;
+
+}
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.journey{
+
+background:white;
+
+}
+
+.timeline{
+
+display:flex;
+
+justify-content:space-between;
+
+flex-wrap:wrap;
+
+gap:25px;
+
+margin-top:60px;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+top:50px;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:#ddd;
+
+z-index:0;
+
+}
+
+.timeline-item{
+
+position:relative;
+
+z-index:2;
+
+background:white;
+
+width:180px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.timeline-item h3{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+background:#FFC107;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:auto;
+
+font-size:24px;
+
+color:#111;
+
+font-weight:700;
+
+box-shadow:0 15px 35px rgba(255,193,7,.35);
+
+margin-bottom:20px;
+
+}
+
+.timeline-item p{
+
+font-size:15px;
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+/* =====================================
+   FEATURES
+===================================== */
+
+.features{
+
+background:#111;
+
+color:white;
+
+}
+
+.features .section-heading h2{
+
+color:white;
+
+}
+
+.features .section-heading p{
+
+color:#dddddd;
+
+}
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+.feature{
+
+background:rgba(255,255,255,.05);
+
+padding:35px;
+
+border-radius:20px;
+
+backdrop-filter:blur(12px);
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.feature:hover{
+
+transform:translateY(-10px);
+
+background:rgba(255,255,255,.08);
+
+}
+
+.feature h3{
+
+font-size:24px;
+
+margin-bottom:18px;
+
+color:#FFC107;
+
+}
+
+.feature p{
+
+color:#dddddd;
+
+line-height:1.8;
+
+}
+/* =====================================
+   INVESTOR SECTION
+===================================== */
+
+.investors{
+
+background:linear-gradient(135deg,#111,#1d1d1d);
+
+color:white;
+
+text-align:center;
+
+padding:120px 0;
+
+}
+
+.investor-content{
+
+width:min(850px,90%);
+
+margin:auto;
+
+}
+
+.investor-content h2{
+
+font-size:52px;
+
+margin-bottom:25px;
+
+color:#FFC107;
+
+}
+
+.investor-content p{
+
+font-size:19px;
+
+line-height:1.9;
+
+margin-bottom:40px;
+
+color:#e0e0e0;
+
+}
+
+/* =====================================
+   STATS
+===================================== */
+
+.stats{
+
+background:#FFC107;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+padding:90px 8%;
+
+text-align:center;
+
+}
+
+.stats div{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+transition:.35s;
+
+}
+
+.stats div:hover{
+
+transform:translateY(-10px);
+
+}
+
+.stats h2{
+
+font-size:48px;
+
+color:#111;
+
+margin-bottom:10px;
+
+font-weight:700;
+
+}
+
+.stats p{
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact{
+
+background:#f7f8fb;
+
+}
+
+.contact-box{
+
+width:min(1100px,90%);
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+.contact-box div{
+
+background:white;
+
+padding:45px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.contact-box div:hover{
+
+transform:translateY(-8px);
+
+}
+
+.contact-box h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#FFC107;
+
+}
+
+.contact-box p{
+
+font-size:17px;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+background:#111;
+
+color:white;
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+footer img{
+
+width:110px;
+
+margin:auto;
+
+margin-bottom:25px;
+
+}
+
+footer h3{
+
+font-size:30px;
+
+margin-bottom:15px;
+
+}
+
+footer p{
+
+color:#bbbbbb;
+
+line-height:1.8;
+
+}
+
+.footer-links{
+
+margin:35px 0;
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+}
+
+.footer-links a{
+
+color:white;
+
+font-weight:500;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#FFC107;
+
+}
+
+.copyright{
+
+margin-top:30px;
+
+font-size:15px;
+
+opacity:.7;
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media(max-width:1100px){
+
+.hero h1{
+
+font-size:56px;
+
+}
+
+.about .container{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline{
+
+justify-content:center;
+
+}
+
+.timeline::before{
+
+display:none;
+
+}
+
+.contact-box{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+.nav-links{
+
+position:absolute;
+
+top:90px;
+
+left:0;
+
+width:100%;
+
+background:#111;
+
+flex-direction:column;
+
+padding:30px;
+
+display:none;
+
+}
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+.hero{
+
+background-attachment:scroll;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-logo{
+
+width:130px;
+
+}
+
+.section-heading h2{
+
+font-size:36px;
+
+}
+
+.about-content h2{
+
+font-size:36px;
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.brand-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.feature-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn{
+
+width:250px;
+
+}
+
+.investor-content h2{
+
+font-size:40px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.navbar{
+
+padding:15px 0;
+
+}
+
+.logo img{
+
+height:52px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+section{
+
+padding:80px 0;
+
+}
+
+.section-heading{
+
+margin-bottom:45px;
+
+}
+
+.brand-card{
+
+padding:30px 20px;
+
+}
+
+.contact-box div{
+
+padding:30px;
+
+}
+
+}
+
+/* =====================================
+   SCROLL ANIMATION
+===================================== */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* =====================================
+   FLOATING BUTTON
+===================================== */
+
+.top-btn{
+
+position:fixed;
+
+bottom:30px;
+
+right:30px;
+
+width:55px;
+
+height:55px;
+
+background:#FFC107;
+
+color:#111;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+cursor:pointer;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+.top-btn:hover{
+
+transform:translateY(-6px);
+
+background:white;
+
+}
+
+/* =====================================
+   IMAGE HOVER
+===================================== */
+
+.brand-card img,
+.about-image img,
+.hero-logo{
+
+transition:.4s;
+
+}
+
+.brand-card:hover img{
+
+transform:scale(1.08) rotate(-2deg);
+
+}
+
+.hero-logo{
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+/* =====================================
+   SELECTION COLOR
+===================================== */
+
+::selection{
+
+background:#FFC107;
+
+color:#111;
+
+}
+
+/* =====================================
+   END
+===================================== */
